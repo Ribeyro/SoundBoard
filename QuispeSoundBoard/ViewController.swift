@@ -22,7 +22,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         super.viewDidLoad()
         tablaGrabaciones.dataSource = self
         tablaGrabaciones.delegate = self
-        // Do any additional setup after loading the view.
+
+        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -53,6 +54,27 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             tablaGrabaciones.reloadData()
         }catch{}
     }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            // Obtener la grabación a eliminar
+            let grabacion = grabaciones[indexPath.row]
+            
+            // Eliminar la grabación de Core Data
+            let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+            context.delete(grabacion)
+            (UIApplication.shared.delegate as! AppDelegate).saveContext()
+            
+            // Actualizar el array de grabaciones
+            do {
+                grabaciones = try context.fetch(Grabacion.fetchRequest())
+                tablaGrabaciones.reloadData()  // Recargar la tabla para reflejar los cambios
+            } catch {
+                print("Error al recargar las grabaciones después de eliminar.")
+            }
+        }
+    }
+
     
 }
 
