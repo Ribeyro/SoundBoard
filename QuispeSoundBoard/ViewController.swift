@@ -18,6 +18,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var reproducirAudio:AVAudioPlayer?
     
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tablaGrabaciones.dataSource = self
@@ -31,10 +32,18 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        let grabacion  = grabaciones[indexPath.row]
-        cell.textLabel?.text = grabacion.nombre
-        return cell
+        
+        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: nil)  // Cambiar a estilo subtítulo
+            let grabacion = grabaciones[indexPath.row]
+            
+            // Asignar el nombre de la grabación
+            cell.textLabel?.text = grabacion.nombre
+            
+            // Asignar la duración de la grabación
+            let duracion = grabacion.duracion  // Como ya es de tipo Double, no necesita desempaquetarse
+            cell.detailTextLabel?.text = String(format: "Time: %.1f segundos", duracion)
+            
+            return cell
     }
     
     

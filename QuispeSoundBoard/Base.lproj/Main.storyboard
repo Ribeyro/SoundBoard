@@ -70,7 +70,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cvF-dt-ORJ">
-                                <rect key="frame" x="124" y="259" width="166.5" height="64"/>
+                                <rect key="frame" x="124" y="298" width="166.5" height="64"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="reproducir" title="Reproducir">
                                     <backgroundConfiguration key="background" cornerRadius="17">
@@ -85,7 +85,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QnS-ql-7ne">
-                                <rect key="frame" x="20" y="353" width="374" height="21"/>
+                                <rect key="frame" x="30" y="449" width="354" height="21"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -93,13 +93,22 @@
                                 <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre de Audio" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ucy-UE-XLn">
-                                <rect key="frame" x="20" y="401" width="374" height="34"/>
+                                <rect key="frame" x="30" y="517" width="354" height="34"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AYf-Xt-vwa">
+                                <rect key="frame" x="184" y="180" width="46" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="LXy-uJ-hv2">
+                                <rect key="frame" x="40" y="221" width="334" height="4"/>
+                            </progressView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bwd-cW-dBl">
-                                <rect key="frame" x="169" y="455" width="76" height="31"/>
+                                <rect key="frame" x="169" y="625" width="76" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Agregar">
                                     <backgroundConfiguration key="background">
@@ -116,35 +125,43 @@
                         <viewLayoutGuide key="safeArea" id="ubN-7f-UZf"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="QnS-ql-7ne" firstAttribute="leading" secondItem="ubN-7f-UZf" secondAttribute="leading" constant="20" id="16z-HR-KDL"/>
-                            <constraint firstItem="ubN-7f-UZf" firstAttribute="trailing" secondItem="QnS-ql-7ne" secondAttribute="trailing" constant="20" id="5vD-Y4-cCY"/>
-                            <constraint firstItem="QnS-ql-7ne" firstAttribute="centerX" secondItem="vig-1H-fgf" secondAttribute="centerX" id="66A-8z-kUz"/>
-                            <constraint firstItem="cvF-dt-ORJ" firstAttribute="centerX" secondItem="QnS-ql-7ne" secondAttribute="centerX" id="HTd-Uk-TG2"/>
-                            <constraint firstItem="cvF-dt-ORJ" firstAttribute="top" secondItem="oiB-jW-Hjf" secondAttribute="bottom" constant="87" id="Lce-J4-J9A"/>
-                            <constraint firstItem="Ucy-UE-XLn" firstAttribute="centerX" secondItem="bwd-cW-dBl" secondAttribute="centerX" id="MFi-MC-aa0"/>
-                            <constraint firstItem="Ucy-UE-XLn" firstAttribute="top" secondItem="QnS-ql-7ne" secondAttribute="bottom" constant="27" id="ONf-vd-zyI"/>
-                            <constraint firstItem="oiB-jW-Hjf" firstAttribute="centerX" secondItem="cvF-dt-ORJ" secondAttribute="centerX" id="Oa6-p9-2YO"/>
-                            <constraint firstItem="oiB-jW-Hjf" firstAttribute="centerX" secondItem="vig-1H-fgf" secondAttribute="centerX" id="U6k-4r-Dac"/>
-                            <constraint firstItem="oiB-jW-Hjf" firstAttribute="top" secondItem="ubN-7f-UZf" secondAttribute="top" constant="20" id="WmX-gU-46X"/>
-                            <constraint firstItem="QnS-ql-7ne" firstAttribute="top" secondItem="cvF-dt-ORJ" secondAttribute="bottom" constant="30" id="fF1-Zu-GSg"/>
-                            <constraint firstItem="ubN-7f-UZf" firstAttribute="trailing" secondItem="Ucy-UE-XLn" secondAttribute="trailing" constant="20" id="fKm-FH-MLI"/>
-                            <constraint firstItem="Ucy-UE-XLn" firstAttribute="leading" secondItem="ubN-7f-UZf" secondAttribute="leading" constant="20" id="g3L-4i-TuT"/>
-                            <constraint firstItem="cvF-dt-ORJ" firstAttribute="centerX" secondItem="vig-1H-fgf" secondAttribute="centerX" id="pQ5-yW-omE"/>
-                            <constraint firstItem="Ucy-UE-XLn" firstAttribute="centerX" secondItem="vig-1H-fgf" secondAttribute="centerX" id="xXE-0O-Yel"/>
-                            <constraint firstItem="bwd-cW-dBl" firstAttribute="top" secondItem="Ucy-UE-XLn" secondAttribute="bottom" constant="20" id="xrv-J6-wgZ"/>
+                            <constraint firstItem="oiB-jW-Hjf" firstAttribute="centerX" secondItem="vig-1H-fgf" secondAttribute="centerX" id="18U-al-9pr"/>
+                            <constraint firstItem="LXy-uJ-hv2" firstAttribute="leading" secondItem="ubN-7f-UZf" secondAttribute="leading" constant="40" id="3ES-wq-jY6"/>
+                            <constraint firstItem="ubN-7f-UZf" firstAttribute="trailing" secondItem="LXy-uJ-hv2" secondAttribute="trailing" constant="40" id="5WG-LR-dZ0"/>
+                            <constraint firstItem="oiB-jW-Hjf" firstAttribute="centerX" secondItem="cvF-dt-ORJ" secondAttribute="centerX" id="5o8-uD-brV"/>
+                            <constraint firstItem="bwd-cW-dBl" firstAttribute="top" secondItem="Ucy-UE-XLn" secondAttribute="bottom" constant="74" id="6tu-8S-npx"/>
+                            <constraint firstItem="oiB-jW-Hjf" firstAttribute="centerX" secondItem="AYf-Xt-vwa" secondAttribute="centerX" id="HEV-k9-gOl"/>
+                            <constraint firstItem="QnS-ql-7ne" firstAttribute="top" secondItem="cvF-dt-ORJ" secondAttribute="bottom" constant="87" id="IZz-kq-3tv"/>
+                            <constraint firstItem="AYf-Xt-vwa" firstAttribute="centerX" secondItem="vig-1H-fgf" secondAttribute="centerX" id="JIk-0c-eMH"/>
+                            <constraint firstItem="oiB-jW-Hjf" firstAttribute="top" secondItem="ubN-7f-UZf" secondAttribute="top" constant="20" id="Jzk-MW-nB3"/>
+                            <constraint firstItem="oiB-jW-Hjf" firstAttribute="centerX" secondItem="AYf-Xt-vwa" secondAttribute="centerX" id="Us2-wr-G0N"/>
+                            <constraint firstItem="AYf-Xt-vwa" firstAttribute="top" secondItem="oiB-jW-Hjf" secondAttribute="bottom" constant="8" symbolic="YES" id="dfI-h3-fGb"/>
+                            <constraint firstItem="Ucy-UE-XLn" firstAttribute="centerX" secondItem="bwd-cW-dBl" secondAttribute="centerX" id="fFN-hG-JOZ"/>
+                            <constraint firstItem="cvF-dt-ORJ" firstAttribute="centerX" secondItem="QnS-ql-7ne" secondAttribute="centerX" id="fVe-aB-YWw"/>
+                            <constraint firstItem="QnS-ql-7ne" firstAttribute="centerX" secondItem="Ucy-UE-XLn" secondAttribute="centerX" id="itb-fT-aA3"/>
+                            <constraint firstItem="AYf-Xt-vwa" firstAttribute="centerX" secondItem="LXy-uJ-hv2" secondAttribute="centerX" id="kb3-PE-hFR"/>
+                            <constraint firstItem="cvF-dt-ORJ" firstAttribute="top" secondItem="LXy-uJ-hv2" secondAttribute="bottom" constant="73" id="nKW-OW-5dB"/>
+                            <constraint firstItem="ubN-7f-UZf" firstAttribute="trailing" secondItem="Ucy-UE-XLn" secondAttribute="trailing" constant="30" id="rCu-bc-GFK"/>
+                            <constraint firstItem="Ucy-UE-XLn" firstAttribute="top" secondItem="QnS-ql-7ne" secondAttribute="bottom" constant="47" id="rlu-op-Ucc"/>
+                            <constraint firstItem="QnS-ql-7ne" firstAttribute="leading" secondItem="ubN-7f-UZf" secondAttribute="leading" constant="30" id="uYi-MP-1BP"/>
+                            <constraint firstItem="LXy-uJ-hv2" firstAttribute="top" secondItem="AYf-Xt-vwa" secondAttribute="bottom" constant="20" id="uqy-fF-Oso"/>
+                            <constraint firstItem="ubN-7f-UZf" firstAttribute="trailing" secondItem="QnS-ql-7ne" secondAttribute="trailing" constant="30" id="xsF-jM-kge"/>
+                            <constraint firstItem="Ucy-UE-XLn" firstAttribute="leading" secondItem="ubN-7f-UZf" secondAttribute="leading" constant="30" id="yoD-cd-RK6"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="69Y-h7-gxu"/>
                     <connections>
                         <outlet property="agregarButton" destination="bwd-cW-dBl" id="Kuk-P0-frc"/>
                         <outlet property="grabarButton" destination="oiB-jW-Hjf" id="Vcz-sh-tZH"/>
+                        <outlet property="lineTimeSound" destination="LXy-uJ-hv2" id="7NZ-iD-oUD"/>
                         <outlet property="nombreTextField" destination="Ucy-UE-XLn" id="cUD-jO-pgQ"/>
                         <outlet property="reproducirButton" destination="cvF-dt-ORJ" id="YZe-w3-JI6"/>
+                        <outlet property="timeSound" destination="AYf-Xt-vwa" id="JAr-hq-0kJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zDi-nS-uBZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1345" y="92"/>
+            <point key="canvasLocation" x="1344.9275362318842" y="91.741071428571431"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="doP-KG-9Se">
